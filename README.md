@@ -4,7 +4,7 @@
 
 ## Overview of Design
 
-<p align="left"><img src="TravellingSalesman.png" alt="TSP" width="500"/></p>
+<p align="left"><img src="img/TravellingSalesman.png" alt="TSP" width="500"/></p>
 
 - The travelling salesman problem is a well known [NP-hard problem](https://en.wikipedia.org/wiki/NP-hardness) that is used in computer science for combinatorial optimizations.
 - Our design employs the use of structures and helper functions to try and solve this problem.
@@ -50,19 +50,19 @@ std::pair<double, std::vector<std::vector<std::string>>> TravellingTrojan_Geneti
 - **Heuristical solutions to TravellingTrojan using 2_opt and GeneticAlgo.**
 
 ## Updated Menu
-<p align="center"><img src="NewMenu.PNG" alt="NewMenu" width="500"/></p>
+<p align="center"><img src="img/NewMenu.PNG" alt="NewMenu" width="500"/></p>
 
 - Our updated menu allowing 7 options.
 
 ## Generating the weight matrix
-<p align="center"><img src="GenWeightMatrix.PNG" alt="GenWeightMatrix" width="500"/></p>
+<p align="center"><img src="img/GenWeightMatrix.PNG" alt="GenWeightMatrix" width="500"/></p>
 
 - Objective was to create an adjacency matrix while mapping every location id to an index.
 - This way the core functions needed minimal alteration.
 - Made implementation more modular.
 
 ## Shortest Path - Dijkstra Priority Queue
-<p align="center"><img src="ShortestPathDjikstra.PNG" alt="SP_Dijkstra" width="500"/></p>
+<p align="center"><img src="img/ShortestPathDjikstra.PNG" alt="SP_Dijkstra" width="500"/></p>
 
 - Idea is to traverse through graph and find next minimum distanced node and update distances of all children.
 - Store parent nodes for each node in every iteration.
@@ -70,14 +70,14 @@ std::pair<double, std::vector<std::vector<std::string>>> TravellingTrojan_Geneti
 - Parent nodes are accessed and recursed to obtain the path in addition to the shortest distance.
 
 ## Travelling Salesman – Brute Force
-<p align="center"><img src="TSPBruteForce.PNG" alt="TSP_brute" width="500"/></p>
+<p align="center"><img src="img/TSPBruteForce.PNG" alt="TSP_brute" width="500"/></p>
 
 - Aimed at solving the TSP using a greedy technique. 
 - Method always returns an optimal result but computationally expensive.
 - Intuitive technique inspired from DFS search + Permutations.
 
 ## Travelling Salesman – 2 opt
-<p align="center"><img src="TSP2-Opt" alt="TSP_2Opt" width="500"/></p>
+<p align="center"><img src="img/TSP2-Opt" alt="TSP_2Opt" width="500"/></p>
 
 - Aimed at solving the TSP using an approximate technique.
 - Utilizes 2-edge swapping
@@ -85,7 +85,7 @@ std::pair<double, std::vector<std::vector<std::string>>> TravellingTrojan_Geneti
 - Computationally less expensive in comparison with Brute Force.
 
 ## Travelling Salesman – Genetic Algorithm
-<p align="center"><img src="GA_FC.png" alt="TSP_GA" width="500"/></p>
+<p align="center"><img src="img/GA_FC.png" alt="TSP_GA" width="500"/></p>
 
 
 - Initialize the population randomly.
@@ -265,6 +265,7 @@ std::pair<double, double> TrojanMap::GetPosition(std::string name) {
 - O(n)
 
 ## Calculate the Shortest Path - A single source shortest path approach.
+<p align="center"><img src="img/djgif.gif" alt="dgif" width="200"/></p>
 
 ### DikjstraPriorityQueue
 ```cpp
@@ -326,11 +327,14 @@ std::pair<double, std::vector<std::vector<std::string>>> TrojanMap::TravellingTr
 
 ##  Travelling Salesman .. b) 2 opt Heuristic Approach
 
+<p align="center"><img src="img/dgm2opt.png" alt="2_opt_OP" width="500"/></p>
+
 **Note: Interpretation of output while executed from the menu**
-<p align="center"><img src="2_optOP.png" alt="2_opt_OP" width="500"/></p>
+<p align="center"><img src="img/2_optOP.png" alt="2_opt_OP" width="500"/></p>
 - Once the input number of locations is given, the ouput will consist of initial, final and difference in path lenghts.
 - This happens before the shortest path is displayed. (Easy to miss the summary mentioned in the first point)
 - Tests cases pass if an improvement is made.
+
 
 ### NN
 ```cpp
@@ -370,7 +374,7 @@ std::pair<double, std::vector<std::vector<std::string>>> TrojanMap::TravellingTr
 
 - Tests cases pass if an improvement is made.
 **Note: Interpretation of output while executed from the menu**
-<p align="center"><img src="GA_OP.png" alt="GA_op" width="500"/></p>
+<p align="center"><img src="img/GA_OP.png" alt="GA_op" width="500"/></p>
 
 ```cpp
 int rand_num(int start, int end) 
@@ -437,14 +441,14 @@ std::pair<double, std::vector<std::vector<std::string>>> TrojanMap::TravellingTr
 ### Results
 #### Shortest Path Highlighted
 ##### Target to Popeyes Louisiana Kitchen - A distance of 1.53852 miles
-<p align="center"><img src="GMaps_target_popeyes.PNG" alt="TargetToPopeyesGM" width="500"/></p>
+<p align="center"><img src="img/GMaps_target_popeyes.PNG" alt="TargetToPopeyesGM" width="500"/></p>
 
-<p align="center"><img src="SP_target_popeyes.PNG" alt="TargetToPopeyes" width="500"/></p>
+<p align="center"><img src="img/SP_target_popeyes.PNG" alt="TargetToPopeyes" width="500"/></p>
 
 ##### Ralphs to ChickFil-A - A distance of 0.74044 miles
-<p align="center"><img src="SP_ralphs_chickfila.PNG" alt="RalphsToChickFilA" width="500"/></p>
+<p align="center"><img src="img/SP_ralphs_chickfila.PNG" alt="RalphsToChickFilA" width="500"/></p>
 
-<p align="center"><img src="GMaps_ralphs_chickfila.PNG" alt="R2CGM" width="500"/></p>
+<p align="center"><img src="img/GMaps_ralphs_chickfila.PNG" alt="R2CGM" width="500"/></p>
 
 ###### Timing Comparison of the different algorithms
 - The time taken on our computers by each of the 3 algorithms are given below
@@ -481,7 +485,7 @@ std::pair<double, std::vector<std::vector<std::string>>> TrojanMap::TravellingTr
 
 ### Learnings - _Mackton Vishal Mendonca_
 
-<p align="center"><img src="Learnings.gif" alt="Amoeba" width="200"/></p>
+<p align="center"><img src="img/Learnings.gif" alt="Amoeba" width="200"/></p>
 
 - Research on this problem revealed some non computer science related problems that are solved using TSP. 
 - (**Physarum polycephalum**, an amoeboid that adapts its morphology to create an efficient path between its food sources).
