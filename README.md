@@ -4,6 +4,7 @@
 
 ## Overview of Design
 
+
 <p align="left"><img src="img/TravellingSalesman.png" alt="TSP" width="500"/></p>
 
 - The travelling salesman problem is a well known [NP-hard problem](https://en.wikipedia.org/wiki/NP-hardness) that is used in computer science for combinatorial optimizations.
@@ -280,7 +281,7 @@ std::vector<double> TrojanMap::DijkstraPriorityQueue(int source, std::vector<std
 - This continues till all nodes in the graph are visited.
 - Ultimately returns the shortest path taken to cover all the nodes.
 - We use this function to find the shortest path taken between 2 nodes defined by the user. 
-- **Time Complexity** O(mlogn)
+- **Time Complexity** O((m+n)logn)
 
 ### CalculateShortestPath
 
