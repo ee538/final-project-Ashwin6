@@ -266,7 +266,9 @@ std::pair<double, double> TrojanMap::GetPosition(std::string name) {
 
 ## Calculate the Shortest Path - A single source shortest path approach.
 <p align="center"><img src="img/Dijkstra_Animation.gif" alt="TSP_GA" width="300"/></p>
+
 ### DikjstraPriorityQueue
+
 ```cpp
 std::vector<double> TrojanMap::DijkstraPriorityQueue(int source, std::vector<std::vector<double>> weight_, std::map<int, int> &prev)
 ```
