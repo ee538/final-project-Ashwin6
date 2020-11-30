@@ -77,7 +77,7 @@ std::pair<double, std::vector<std::vector<std::string>>> TravellingTrojan_Geneti
 - Intuitive technique inspired from DFS search + Permutations.
 
 ## Travelling Salesman – 2 opt
-<p align="center"><img src="img/TSP2-Opt" alt="TSP_2Opt" width="500"/></p>
+<p align="center"><img src="img/TSP2-Opt.PNG" alt="TSP_2Opt" width="500"/></p>
 
 - Aimed at solving the TSP using an approximate technique.
 - Utilizes 2-edge swapping
@@ -265,7 +265,6 @@ std::pair<double, double> TrojanMap::GetPosition(std::string name) {
 - O(n)
 
 ## Calculate the Shortest Path - A single source shortest path approach.
-<p align="center"><img src="img/djgif.gif" alt="dgif" width="200"/></p>
 
 ### DikjstraPriorityQueue
 ```cpp
@@ -279,7 +278,7 @@ std::vector<double> TrojanMap::DijkstraPriorityQueue(int source, std::vector<std
 - This continues till all nodes in the graph are visited.
 - Ultimately returns the shortest path taken to cover all the nodes.
 - We use this function to find the shortest path taken between 2 nodes defined by the user. 
-- **Time Complexity** O(n^2)
+- **Time Complexity** O(mlogn)
 
 ### CalculateShortestPath
 
@@ -294,6 +293,8 @@ std::vector<std::string> TrojanMap::CalculateShortestPath(std::string location1_
 - The reverse of the path generated from the source to destination is evaluated to verify the path.
 - These values are passed as parameters for the DijkstraPriorityQueue function.
 - The path is returned.
+
+- **Time Complexity** O(n^2).
 
 ##  Travelling Salesman .. a) A Brute Force Approach
 
@@ -327,14 +328,18 @@ std::pair<double, std::vector<std::vector<std::string>>> TrojanMap::TravellingTr
 
 ##  Travelling Salesman .. b) 2 opt Heuristic Approach
 
-<p align="center"><img src="img/dgm2opt.png" alt="2_opt_OP" width="500"/></p>
+
+<p align="center"><img src="img/2-OptImage.PNG" alt="algo_image" width="300"/></p>
+
+<p align="center"><img src="img/2-opt.gif" alt="algo_image" width="300"/></p>
 
 **Note: Interpretation of output while executed from the menu**
+
 <p align="center"><img src="img/2_optOP.png" alt="2_opt_OP" width="500"/></p>
-- Once the input number of locations is given, the ouput will consist of initial, final and difference in path lenghts.
+
+- Once the input number of locations is given, the ouput will consist of initial, final and difference in path lengths.
 - This happens before the shortest path is displayed. (Easy to miss the summary mentioned in the first point)
 - Tests cases pass if an improvement is made.
-
 
 ### NN
 ```cpp
@@ -373,7 +378,11 @@ std::pair<double, std::vector<std::vector<std::string>>> TrojanMap::TravellingTr
 ##  Travelling Salesman .. c) Genetic Algorithm
 
 - Tests cases pass if an improvement is made.
+
+<p align="center"><img src="img/GenAlgo.GIF" alt="GA_op" width="500"/></p>
+
 **Note: Interpretation of output while executed from the menu**
+
 <p align="center"><img src="img/GA_OP.png" alt="GA_op" width="500"/></p>
 
 ```cpp
@@ -450,6 +459,10 @@ std::pair<double, std::vector<std::vector<std::string>>> TrojanMap::TravellingTr
 
 <p align="center"><img src="img/GMaps_ralphs_chickfila.PNG" alt="R2CGM" width="500"/></p>
 
+##### Travelling Salesman Animation
+
+<p align="center"><img src="img/TSP.gif" alt="TargetToPopeyes" width="500"/></p>
+
 ###### Timing Comparison of the different algorithms
 - The time taken on our computers by each of the 3 algorithms are given below
     - Travelling salesman using Brute Force - 13.14 seconds
@@ -492,6 +505,8 @@ std::pair<double, std::vector<std::vector<std::string>>> TrojanMap::TravellingTr
 - Substituting cities and travelling distances for chip components and connecting circuits, the potential of TSP in chip design to integrate more and more transistors on a chip.
 - Deeper understanding of object oriented programming for data extraction and usage of structures in C++.
 - Understanding the importance of testing an application to not just provide a solution but also catch “not solutions”. To not only catch bugs but also to improve the quality of code.
+- This project also helped me understand Unix commands as well as the usage of Github.
+
 
 
 
